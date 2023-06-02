@@ -12,3 +12,7 @@ form {
     background-color: aliceblue;
     margin: 10vh;
 }
+
+.hidden {
+    display: none;
+}
