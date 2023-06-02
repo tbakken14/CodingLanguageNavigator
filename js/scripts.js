@@ -1,27 +1,28 @@
 let form;
 let dropDown1;
-let input2;
+let section2;
 
 function selectDropDown1(event) {
-    event.preventDefault();
-    console.log('selected drop down 1');
+
+    section2.removeAttribute("class");
 }
 
 //Initializations to execute on window load
 function InitializeVariables() {
     form = document.getElementsByTagName("form");
     dropDown1 = document.getElementById("input-1");
+    section2 = document.getElementById("section-2");
     console.log(dropDown1);
 }
 
-function InitializeEventFunctions() {
+function InitializeEventListeners() {
     dropDown1.addEventListener("change", selectDropDown1);
     console.log(dropDown1);
 }
 
 window.onload = function () {
     InitializeVariables();
-    InitializeEventFunctions();
+    InitializeEventListeners();
 };
 
 /*
