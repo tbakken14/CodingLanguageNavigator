@@ -3,8 +3,10 @@ let form;
 let dropDown1;
 let dropDown2;
 let section2;
+let result;
 
 function selectDropDown1(event) {
+    result.setAttribute("class", "hidden")
     //Reset drop down options
     removeOptionsFromDropDown(dropDown2);
     addOptionToDropDown(dropDown2, "Choose an option", true);
@@ -23,6 +25,30 @@ function selectDropDown1(event) {
             break;
     }
     section2.removeAttribute("class");
+}
+
+function selectDropDown2(event) {
+    result.innerHTML = "You should learn: ";
+    switch (dropDown2.value) {
+        case ("Frontend"):
+            result.innerHTML += "Javascript";
+            break;
+        case ("Backend"):
+            result.innerHTML += "C#";
+            break;
+        case ("Database Management"):
+            result.innerHTML += "SQL";
+            break;
+        case ("Machine Learning"):
+            result.innerHTML += "Python";
+            break;
+        case ("Statistics"):
+            result.innerHTML += "R";
+            break;
+        default:
+            break;
+    }
+    result.removeAttribute("class")
 }
 
 function removeOptionsFromDropDown(dropDown) {
@@ -54,10 +80,12 @@ function InitializeVariables() {
     dropDown1 = document.getElementById("input-1");
     dropDown2 = document.getElementById("input-2");
     section2 = document.getElementById("section-2");
+    result = document.getElementById("result");
 }
 
 function InitializeEventListeners() {
     dropDown1.addEventListener("change", selectDropDown1);
+    dropDown2.addEventListener("change", selectDropDown2);
 }
 
 window.onload = function () {

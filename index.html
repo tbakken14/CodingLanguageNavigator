@@ -15,20 +15,28 @@
     <h2>How to use: </h2>
     <p>Fill out the form to determine what coding language to learn.</p>
     <form>
-        <label for="input-1">What is your use case: </label>
+        <label for="name">Name: </label>
+        <input id="name" type="text"><br>
+        <label for="age">Age: </label>
+        <input id="age" type="text"><br>
+        <label for="experience">Do you have prior experience? </label>
+        <input id="experience" type="text"><br>
+        <label for="input-1">What is your use case? </label>
         <select id="input-1">
             <option selected disabled hidden>Choose an option</option>
             <option>Software Engineering</option>
             <option>Data Science</option>
         </select><br>
         <div id="section-2" class="hidden">
-            <label for="input-2">What interests you in this field</label>
+            <label for="input-2">What interests you in this field? </label>
             <select id="input-2">
-                <option selected disabled hidden>Choose an option</option>
             </select><br>
         </div>
         <input type="submit"></input>
     </form>
+    <div id="result" class="hidden">
+        Result
+    </div>
 </body>
 
 </html>
